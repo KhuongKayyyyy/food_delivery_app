@@ -74,13 +74,33 @@ class _VerificationPageState extends State<VerificationPage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "CODE",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                            color: Theme.of(context).colorScheme.surface,
-                          ),
+                        Row(
+                          children: [
+                            Text(
+                              "CODE",
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Theme.of(context).colorScheme.surface,
+                              ),
+                            ),
+                            const Spacer(),
+                            InkWell(
+                              onTap: (){
+                                print("Request to resend verification code");
+                              },
+                              child: Text(
+                                "Resend ",
+                                style: TextStyle(
+                                  color: Theme.of(context).colorScheme.background,
+                                  fontWeight: FontWeight.bold,
+                                  decoration: TextDecoration.underline,
+                                  decorationColor: Theme.of(context).colorScheme.background,
+                                )
+                              ),
+                            ),
+                            const Text("in 50 sec")
+                          ],
                         ),
                         const SizedBox(height: 10),
                         Row(

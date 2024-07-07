@@ -4,6 +4,7 @@ import 'package:food_delivery_app/Component/password_textfield.dart';
 import 'package:food_delivery_app/Component/primary_button.dart';
 import 'package:food_delivery_app/Component/primary_textfield.dart';
 import 'package:food_delivery_app/View/forget_password_page.dart';
+import 'package:food_delivery_app/View/homepage_screen.dart';
 import 'package:food_delivery_app/View/sign_up.dart';
 
 class LogInPage extends StatefulWidget {
@@ -113,7 +114,7 @@ class _LogInPageState extends State<LogInPage> {
                       ],
                     ),
                     const SizedBox(height: 20),
-                    PrimaryButton(btnText: "LOG IN", onPressed: () {}),
+                    PrimaryButton(btnText: "LOG IN", onPressed: _validateLogIn),
                     const SizedBox(height: 20),
                     Row(
                       children: [
@@ -199,5 +200,9 @@ class _LogInPageState extends State<LogInPage> {
         ],
       ),
     );
+  }
+
+  void _validateLogIn(){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => HomepageScreen()));
   }
 }
