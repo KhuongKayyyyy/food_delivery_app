@@ -134,6 +134,7 @@ class _HomepageScreenState extends State<HomepageScreen> {
                     ],
                   ),
                   ListView.builder(
+                    padding: EdgeInsets.zero,
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: restaurantList.length,

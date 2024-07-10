@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery_app/Util/theme.dart';
 import 'package:food_delivery_app/View/log_in_page.dart';
 
+import 'Util/fake_data.dart';
+
 void main() {
+  FakeData.init();
   runApp(const MyApp());
 }
 
